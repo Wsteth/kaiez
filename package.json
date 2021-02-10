@@ -1,0 +1,34 @@
+{
+  "name": "kaiez",
+  "version": "0.0.1",
+  "description": "开黑啦websocket版sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wsteth/kaiez.git"
+  },
+  "keywords": [
+    "kaiheila"
+  ],
+  "author": "wsteth",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wsteth/kaiez/issues"
+  },
+  "homepage": "https://github.com/Wsteth/kaiez#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@types/pako": "^1.0.1",
+    "@types/ws": "^7.4.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "typescript": "^4.1.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
