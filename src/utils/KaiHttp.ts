@@ -1,6 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios'
 import { KaiAPIResponse } from '../types/APIResponse'
-import KaiLog from './KaiLog'
 
 const serverConfig: { serverURL: string, apiVersion: number } = {
     serverURL: 'https://www.kaiheila.cn',
@@ -21,19 +20,19 @@ export default class {
 
     }
 
-    async get(url: string, params: any = {}) {
-        let result!: any
+    async get(url: string, params = {}): Promise<KaiAPIResponse> {
+        let result!: KaiAPIResponse
         await this.requestor.get(url, { params })
             .then(response => result = response.data as KaiAPIResponse)
-            .catch(response => KaiLog.debug('get method ERROR: ', response))
+            .catch(response => { throw response })
         return result
     }
 
-    async post(url: string, data: any) {
-        let result!: any
+    async post(url: string, data = {}): Promise<KaiAPIResponse> {
+        let result!: KaiAPIResponse
         await this.requestor.post(url, data, { headers: { 'Content-type': 'application/json' } })
             .then(response => result = response.data as KaiAPIResponse)
-            .catch(response => KaiLog.debug('post method ERROR: ', response))
+            .catch(response => { throw response })
         return result
     }
 

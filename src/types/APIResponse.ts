@@ -1,4 +1,4 @@
-import { KaiAssetResponse, KaiChannelMessageResponse, KaiGatewayResponse, KaiGuildRole, KaiGuildUserRoleResponse, KaiIntimacyResponse, KaiUserResponse } from "./KaiTypes"
+import { KaiAssetResponse, KaiChannelMessageResponse, KaiGatewayResponse, KaiGuildRole, KaiGuildUserRoleResponse, KaiIntimacyResponse, KaiUserResponse } from './KaiTypes'
 
 export interface KaiAPIResponse {
     code: number

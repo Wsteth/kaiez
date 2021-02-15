@@ -1,16 +1,9 @@
 
-import fs from 'fs'
-import path from 'path'
 
-export default {
-    debug: (text: string, printToScreen: boolean, ...args: any[]) => {
-        const formatText = `${formatDate()} - ${text}`
-        if (printToScreen === true) {
-            // tslint:disable-next-line
-            console.log(formatText, args)
-        }
-    },
-
+export default (text: string, ...args: any[]) => {
+    const formatText = `${formatDate()} - ${text}`
+    // tslint:disable-next-line
+    console.log(formatText, args)
 }
 
 const formatDate = (): string => {
